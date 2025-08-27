@@ -1,0 +1,83 @@
+kind: Pod
+apiVersion: v1
+# Here we give name for pod
+metadata:
+  name: first-nginx-pod
+  # by sdding namespace we have  assigned the pod in the devops part
+  namespace: devops
+# Here we will give specifivation
+# container name
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:latest
+---
+kind: Pod
+apiVersion: v1
+# Here we give name for pod
+metadata:
+  name: second-nginx-pod
+  # by sdding namespace we have  assigned the pod in the devops part
+  namespace: devops
+# Here we will give specifivation
+# container name
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:latest
+---
+kind: Pod
+apiVersion: v1
+# Here we give name for pod
+metadata:
+  name: third-nginx-pod
+  # by sdding namespace we have  assigned the pod in the devops part
+  namespace: devops
+# Here we will give specifivation
+# container name
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:latest
+---
+kind: Pod
+apiVersion: v1
+# Here we give name for pod
+metadata:
+  name: fourth-nginx-pod
+  # by sdding namespace we have  assigned the pod in the devops part
+  namespace: devops
+# Here we will give specifivation
+# container name
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:latest
+---
+kind: Pod
+apiVersion: v1
+# Here we give name for pod
+metadata:
+  name: fifth-nginx-pod
+  # by sdding namespace we have  assigned the pod in the devops part
+  namespace: devops
+# Here we will give specifivation
+# container name
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:latest
+---
+kind: Pod
+apiVersion: v1
+# Here we give name for pod
+metadata:
+  name: six-nginx-pod
+  # by sdding namespace we have  assigned the pod in the devops part
+  namespace: devops
+# Here we will give specifivation
+# container name
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:latest

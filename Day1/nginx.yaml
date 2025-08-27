@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+# Here we give name for pod
+metadata:
+  name: another-nginx-pod
+  # by sdding namespace we have  assigned the pod in the devops part
+  namespace: devops
+# Here we will give specifivation
+# container name
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:latest

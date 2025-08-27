@@ -1,0 +1,14 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: dev
+--- # this line is like a partion it will assume that code below it is different and above is different
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: qa
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: devops
