@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: backend-deployment
 spec:
-  replicas: 1 # will create 1 pods replicas/duplicates.
+  replicas: 1
   selector:
     matchLabels:
       app: backend
@@ -12,8 +12,15 @@ spec:
       labels:
         app: backend
     spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  app: frontend
+              topologyKey: "kubernetes.io/hostname"
       containers:
-      - name: backend-container
-        image: nginx:latest
-        ports:
-        - containerPort: 80
+        - name: backend-container
+          image: nginx:latest
+          ports:
+            - containerPort: 80
