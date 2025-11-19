@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: local-mysql-pv
+spec:
+  capacity:
+    storage: 1Gi # 1gb of volume
+  accessModes: #used to access the data inside the container
+    - ReadWriteMany # as i need to read and write the many times
+  storageClassName: local-storage
+  # to create a path for the 1gb volume.
+  # you can also usde any path ex.- /mysql-mnt/mysql-data
+  hostPath:
+    path: /mnt/mysql-data
